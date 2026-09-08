@@ -27,15 +27,23 @@
 - [x] Implement `owner/requests/page.tsx`: Unified review list containing pending cancellations and extra requests from students, with approve/reject actions.
 
 ## Phase 4 — Owner Portal: Menu Planner & Invoicing
-- [ ] Implement `owner/menu/page.tsx`: Two tabs - "Daily Plan" (Date, Meal Type, multiselect dishes selector) and "Dishes" (recipe additions, list with category colors).
-- [ ] Implement `owner/billing/page.tsx`: Billing grid showing client invoices, with monthly filters.
-- [ ] Implement "Generate Monthly Bills" dialog/form calling `/api/bill/generate`.
-- [ ] Implement "Record Payment Status" modal calling `/api/bill/:billId/payment`.
-- [ ] Implement `owner/dashboard/page.tsx`: Rich dashboard stats (Total Users, Deliveries Today, Pending Requests, Revenue charts using Recharts).
+- [x] Implement `owner/menu/page.tsx`: Two tabs - "Daily Plan" (Date, Meal Type, multiselect dishes selector) and "Dishes" (recipe additions, list with category colors).
+- [x] Implement `owner/billing/page.tsx`: Billing grid showing client invoices, with monthly filters.
+- [x] Implement "Generate Monthly Bills" dialog/form calling `/api/bill/generate`.
+- [x] Implement "Record Payment Status" modal calling `/api/bill/:billId/payment`.
+- [x] Implement `owner/dashboard/page.tsx`: Rich dashboard stats (Total Users, Deliveries Today, Pending Requests, Revenue charts using Recharts).
 
 ## Phase 5 — Super Admin Portal
-- [ ] Build `/super-admin` layout with sidebar.
-- [ ] Implement `super-admin/dashboard/page.tsx`: Platform statistics summary (Registered owners, active subscription counts, global revenue stats).
-- [ ] Implement `super-admin/owners/page.tsx`: Mess owners list displaying service prefix, owner name, and status.
-- [ ] Implement `super-admin/owners/new/page.tsx`: Registration form for new owner account and mess service initialization.
-- [ ] Implement `super-admin/settings/page.tsx`: Settings page with functional Sign Out and placeholder account modification actions.
+- [x] Build `/super-admin` layout with sidebar.
+- [x] Implement `super-admin/dashboard/page.tsx`: Platform statistics summary (Registered owners, active subscription counts, global revenue stats).
+- [x] Implement `super-admin/owners/page.tsx`: Mess owners list displaying service prefix, owner name, and status.
+- [x] Implement `super-admin/owners/new/page.tsx`: Registration form for new owner account and mess service initialization.
+- [x] Implement `super-admin/settings/page.tsx`: Settings page with functional Sign Out and system controls.
+
+## Phase 6 — Operations Hardening & Attendance Lifecycle
+- [x] Route Architecture Unification: Migrate `app/(user)` to `app/user/` for clean `/user/...` multi-tenant URL boundaries.
+- [x] Implement executive Landing Page at root `/` with authenticated role auto-redirection and product showcase.
+- [x] Implement `client/lib/api/meal-log.ts` client with full student attendance and dispute resolution methods.
+- [x] Implement `user/meals/page.tsx`: Student attendance log, compliance metrics, and 7-day cutoff meal dispute reporting.
+- [x] Implement Owner Meal Dispute Review queue in `owner/requests/page.tsx` for approving or rejecting attendance disputes.
+- [x] Upgrade Subscriber detail view `owner/users/[id]/page.tsx` into a 3-tab 360° console (Profile & Plan, Meal History, Invoices).
